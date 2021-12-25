@@ -1,0 +1,1394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+body {
+    background-color: rgba(0, 255, 255, 0.173);
+}
+
+#container {
+  position: fixed;
+}
+
+
+/* De eerste scène */
+
+h1 {
+    left: 390px;
+    top: 250px;
+    position: absolute;
+    font-family:'Big Caslon';
+    font-weight: bold;
+    background-image: linear-gradient(to left, violet, indigo, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 50px;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    animation: textScale;
+    animation-timing-function: cubic-bezier(.61, -0.38, .72, 1.85);
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes textScale {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.3);
+    }
+
+    50% {
+        transform: scale(1.6);
+    }
+
+    75% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#button1 {
+    background-image: linear-gradient(to left, violet, indigo, blue);
+    color: white;
+    position: absolute;
+    width: 90px;
+    height: 36px;
+    left: 200px;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#bettaVis {
+    width: 806px;
+    top: -20%;
+    left: -40%;
+    animation-name: zwemt;
+    animation-timing-function: linear;
+    animation-duration: 18s;
+    position: fixed;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zwemt {
+    0% {
+        top: -20%;
+        left: -40%;
+        transform: scaleX(-1);
+    }
+
+    20% {
+        top: 5%;
+        left: 20%;
+        transform: scaleX(-1);
+
+    }
+
+    37% {
+        top: 0%;
+        left: 90%;
+        transform: scaleX(-1);
+    }
+
+    42% {
+        top: 70%;
+        left: 90%;
+        transform: scaleX(-1);
+    }
+
+    50% {
+        top: 80%;
+        left: 80%;
+        transform: scaleX(1);
+    }
+
+    87% {
+        top: 50%;
+        left: -50%;
+        transform: scaleX(1);
+    }
+
+    93% {
+        top: 0%;
+        left: -50%;
+        transform: scaleX(-1);
+    }
+
+    100% {
+        top: -20%;
+        left: -50%;
+        transform: scaleX(-1);
+    }
+
+}
+
+#fish {
+    transform: scale(0.5);
+}
+
+.fish {
+    position: absolute;
+}
+
+.babble {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    border-radius: 26px;
+    background-image: url(../img/bubble.png);
+    background-size: contain;
+    opacity: .4
+}
+
+.babbleOne {
+    animation: babbleanimation 4s ease-in-out forwards infinite;
+}
+
+.babbleTwo {
+    animation: babbleanimation 2s ease-in-out forwards infinite;
+}
+
+@keyframes babbleanimation {
+    from {
+        width: 0;
+        height: 0;
+        transform: translateY(0);
+    }
+
+    to {
+        width: 30px;
+        height: 30px;
+        transform: translateY(-450px);
+    }
+}
+
+#topFin1 {
+    background-image: url(../img/upFin.jpeg);
+    background-size: contain;
+    width: 442px;
+    height: 248px;
+    top: -32px;
+    left: 260px;
+    animation: topwing 3.5s linear forwards infinite;
+    transform-origin: bottom left;
+}
+
+@keyframes topwing {
+    0% {
+        transform: skewY(0);
+    }
+
+    50% {
+        transform: skewY(6deg);
+    }
+
+    100% {
+        transform: skewY(0);
+    }
+}
+
+#tail1 {
+    background-image: url(../img/tail.jpeg);
+    width: 359px;
+    height: 490px;
+    top: 79px;
+    left: 459px;
+    animation: swinging 2.5s linear forwards infinite;
+    transform-origin: left center;
+}
+
+@keyframes swinging {
+    0% {
+        transform: skewY(0deg);
+    }
+
+    25% {
+        transform: skewY(-3deg);
+    }
+
+    50% {
+        transform: skewY(0deg);
+    }
+
+    75% {
+        transform: skewY(3deg);
+    }
+
+    100% {
+        transform: skewY(0deg);
+    }
+}
+
+#bottomFin1 {
+    background-image: url(../img/bottomFin.jpeg);
+    width: 361px;
+    height: 336px;
+    top: 293px;
+    left: 182px;
+    animation: swingingWing 3.5s linear forwards infinite;
+    transform-origin: top center;
+}
+
+@keyframes swingingWing {
+    0% {
+        transform: skew(0deg);
+    }
+
+    50% {
+        transform: skew(6deg);
+    }
+
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+#bodyVis1 {
+    background-image: url(../img/body.jpeg);
+    background-size: contain;
+    top: 150px;
+    left: 10px;
+    width: 513px;
+    height: 220px;
+    animation: zwemmen 3.5s linear forwards infinite;
+    transform-origin: 20px center;
+}
+
+@keyframes zwemmen {
+    0% {
+        transform: skewY(0deg);
+    }
+
+    50% {
+        transform: skewY(1deg);
+        transform-origin: 100px;
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: skewY(0deg);
+    }
+}
+
+
+/*De tweede Betta*/
+
+#rodeBettaVis {
+    width: 810px;
+    top: -40%;
+    left: -70%;
+    animation-name: zwemt;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+    position: fixed;
+    animation-iteration-count: infinite;
+    animation-delay: 6s;
+}
+
+#redFish {
+    transform: scale(0.5);
+}
+
+#topFin2 {
+    background-image: url(../img/topFinRedBetta.jpeg);
+    background-size: contain;
+    width: 393px;
+    height: 290px;
+    top: -32px;
+    left: 282px;
+    animation: topwing 3.5s linear forwards infinite;
+    transform-origin: bottom left;
+}
+
+#tail2 {
+    background-image: url(../img/tailRedBetta.jpeg);
+    width: 308px;
+    height: 485px;
+    top: 45px;
+    left: 475px;
+    animation: swinging 1.5s linear forwards infinite;
+    transform-origin: left center;
+}
+
+#bottomFin2 {
+    background-image: url(../img/bottomFinRedBetta.jpeg);
+    width: 418px;
+    height: 285px;
+    top: 290px;
+    left: 152px;
+    animation: swingingWing 3.5s linear forwards infinite;
+    transform-origin: top center;
+}
+
+#bodyVis2 {
+    background-image: url(../img/bettaRedBody.jpeg);
+    background-size: contain;
+    top: 155px;
+    left: 10px;
+    width: 549px;
+    height: 207px;
+    animation: zwemmen 3.5s linear forwards infinite;
+    transform-origin: 20px center;
+}
+
+
+/*De tweede scène*/
+
+#backgroundImage1 {
+    background-image: url(../img/img_betta_fish_natural_habitat_sumatera_rivers_02.jpeg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: top;
+    position: fixed;
+    cursor: url(../img/fish_net1.jpeg), auto;
+}
+
+#bettaVis1 {
+    width: 806px;
+    height: 651px;
+    bottom: -400px;
+    left: -50%;
+    position: fixed;
+    animation-name: zwemt1;
+    animation-timing-function: linear;
+    animation-duration: 28s;
+    animation-iteration-count: infinite;
+}
+
+#visInNatuurlijkeHabitat {
+    position: absolute;
+    transform: scale(0.2);
+    top: 40px;
+    left: 20px;
+    opacity: 0.9;
+}
+
+@keyframes zwemt1 {
+    0% {
+        bottom: -480px;
+        left: -50%;
+        transform: scaleX(-1);
+    }
+
+    35% {
+        bottom: -480px;
+        left: 100%;
+        transform: scaleX(-1);
+    }
+
+    45% {
+        bottom: -480px;
+        left: 100%;
+        transform: scaleX(1);
+    }
+
+    60% {
+        bottom: -280px;
+        left: 60%;
+        transform: scale(0.3);
+        opacity: 0.8;
+    }
+
+    75% {
+        bottom: -250px;
+        left: 20%;
+        transform: scale(0.3);
+        opacity: 0.8;
+    }
+
+    100% {
+        bottom: -480px;
+        left: -50%;
+        transform: scaleX(1);
+    }
+}
+
+p {
+    background-color: white;
+    font-size: 30px;
+    font-family:'Big Caslon';
+    font-weight: bold;
+    text-align: justify;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    padding: 20px 20px 10px 20px;
+    color: black;
+}
+
+span {
+    font-size: 46px;
+    text-align: center;
+    display: block;
+    background-image: linear-gradient(to left, violet, indigo, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* De derde scène*/
+
+h2 {
+    top: 10px;
+    left: 350px;
+    position: absolute;
+    font-family:'Big Caslon';
+    font-weight: bold;
+    background-image: linear-gradient(to left, violet, indigo, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 46px;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    padding-left: 70px;
+    animation: movetext;
+    animation-timing-function: linear;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movetext {
+    0% {
+        top: 10px;
+        left: 350px;
+    }
+
+    15% {
+        top: 30px;
+        left: 320px;
+    }
+
+    30% {
+        top: 10px;
+        left: 350px;
+    }
+
+    45% {
+        top: 30px;
+        left: 320px;
+    }
+
+    60% {
+        top: 10px;
+        left: 350px;
+    }
+
+    80% {
+        top: 30px;
+        left: 350px;
+    }
+
+    100% {
+        top: 10px;
+        left: 350px;
+    }
+}
+
+#aquarium1 {
+    background-image: url(../img/acvariu1.jpeg);
+    position: absolute;
+    top: 153px;
+    left: 230px;
+    width: 761px;
+    height: 544px;
+    background-repeat: no-repeat;
+}
+
+#aquarium2 {
+    background-image: url(../img/acvariu2.jpeg);
+    position: absolute;
+    top: 140px;
+    left: 230px;
+    width: 756px;
+    height: 564px;
+    background-repeat: no-repeat;
+}
+
+#aquarium3 {
+    background-image: url(../img/acvariu3.jpeg);
+    position: absolute;
+    top: 140px;
+    left: 230px;
+    width: 756px;
+    height: 564px;
+    background-repeat: no-repeat;
+}
+
+#aquarium4 {
+    background-image: url(../img/acvariu4.jpeg);
+    position: absolute;
+    top: 140px;
+    left: 230px;
+    width: 756px;
+    height: 564px;
+    background-repeat: no-repeat;
+}
+
+#filtru {
+    position: absolute;
+    width: 130px;
+    height: 245px;
+    top: 400px;
+    left: 180px;
+    animation-name: moveInAquarium;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
+    transform: scale(0.8);
+}
+
+@keyframes moveInAquarium {
+    25% {
+        top: 400px;
+        left: 180px;
+    }
+
+    50% {
+        top: -180px;
+        left: 80px;
+    }
+
+    75% {
+        top: -140px;
+        left: -30px;
+    }
+
+    100% {
+        top: 320px;
+        left: -90px;
+    }
+}
+
+.filter {
+    position: absolute;
+}
+
+#left {
+    background-image: url(../img/Skype_Picture_2021_12_12T12_44_13_651Z.jpeg);
+    width: 133px;
+    height: 489px;
+    top: -680px;
+    left: 450px;
+    transform: rotate(90deg);
+    animation-name: moveToFilter1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes moveToFilter1 {
+    0% {
+        transform: rotate(90deg);
+        top: -680px;
+        left: 450px;
+    }
+
+    50% {
+        top: -680px;
+        left: 1102px;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        top: -160px;
+        left: 1032px;
+    }
+}
+
+#center {
+    background-image: url(../img/Skype_Picture_2021_12_12T12_44_33_314Z.jpeg);
+    width: 255px;
+    height: 485px;
+    top: -160px;
+    left: 1030px;
+}
+
+#right {
+    background-image: url(../img/Skype_Picture_2021_12_12T12_44_26_834Z.jpeg);
+    width: 151px;
+    height: 474px;
+    top: -660px;
+    left: 950px;
+    transform: rotate(90deg);
+    animation-name: moveToFilter2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}
+
+@keyframes moveToFilter2 {
+    0% {
+        transform: rotate(90deg);
+        top: -660px;
+        left: 950px;
+    }
+
+    50% {
+        transform: rotate(90deg);
+        top: -660px;
+        left: 1127px;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        top: -155px;
+        left: 1127px;
+    }
+}
+
+#termometer {
+    background-image: url(../img/termometru.jpeg);
+    width: 93px;
+    height: 335px;
+    top: 380px;
+    left: 0px;
+    background-repeat: no-repeat;
+    transform: scaleX(-0.8);
+    position: absolute;
+    animation: moveInAquarium1 4s linear forwards 10s;
+}
+
+@keyframes moveInAquarium1 {
+    0% {
+        top: 380px;
+        left: 0px;
+
+    }
+
+    30% {
+        top: 100px;
+        left: 100px;
+
+    }
+
+    65% {
+        top: -200px;
+        left: 250px;
+
+    }
+
+    100% {
+        top: 270px;
+        left: 700px;
+    }
+}
+
+#heater {
+    position: absolute;
+    background-image: url(../img/heater.jpeg);
+    width: 56px;
+    height: 364px;
+    top: 0px;
+    left: 1200px;
+    animation: moveInAquarium2 5s linear forwards 13s;
+}
+
+@keyframes moveInAquarium2 {
+    0% {
+        top: 0px;
+        left: 1200px;
+
+    }
+
+    25% {
+        top: -100px;
+        left: 1200px;
+
+    }
+
+    50% {
+        top: -300px;
+        left: 800px;
+
+    }
+
+    100% {
+        top: 180px;
+        left: 350px;
+    }
+}
+
+#plant {
+    position: absolute;
+    background-image: url(../img/Plant1.png);
+    width: 91px;
+    height: 140px;
+    top: 580px;
+    left: 100px;
+    animation: moveInAquarium3 4s linear forwards 18s;
+}
+
+@keyframes moveInAquarium3 {
+    0% {
+        top: 580px;
+        left: 100px;
+
+    }
+
+    30% {
+        top: 0px;
+        left: 100px;
+
+    }
+
+    65% {
+        top: -80px;
+        left: 250px;
+
+    }
+
+    100% {
+        top: 430px;
+        left: 370px;
+    }
+}
+
+#plant1 {
+    position: absolute;
+    background-image: url(../img/plant1.jpeg);
+    width: 250px;
+    height: 322px;
+    top: 190px;
+    left: 0px;
+    background-repeat: no-repeat;
+    animation: moveInAquarium4 5s linear forwards 22s;
+}
+
+@keyframes moveInAquarium4 {
+    0% {
+        top: 190px;
+        left: 0px;
+
+    }
+
+    30% {
+        top: -150px;
+        left: 0px;
+
+    }
+
+    75% {
+        top: -150px;
+        left: 350px;
+
+    }
+
+    100% {
+        top: 290px;
+        left: 420px;
+    }
+}
+
+#oxigen {
+    position: absolute;
+    background-image: url(../img/oxigen.jpeg);
+    width: 343px;
+    height: 301px;
+    top: -60px;
+    left: -60px;
+    transform: scaleX(-1);
+    background-repeat: no-repeat;
+    animation: moveInAquarium5 2s linear forwards 27s;
+}
+
+@keyframes moveInAquarium5 {
+    0% {
+        top: -60px;
+        left: -60px;
+        transform: scaleX(-1);
+    }
+
+    30% {
+        top: -100px;
+        left: 20px;
+        transform: scaleX(-1);
+    }
+
+    75% {
+        top: 60px;
+        left: 20px;
+        transform: scaleX(-1);
+    }
+
+    100% {
+        top: 155px;
+        left: 5px;
+        transform: scaleX(-1);
+    }
+}
+
+.naarDeVolgendeScène {
+    
+    background-image: linear-gradient(to left, violet, indigo, blue);
+    color: white;
+    position: absolute;
+    width: 90px;
+    height: 36px;
+    left: 190px;
+    top: 50px;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#skipButton {
+    left: 200px;
+    top: 650px;
+}
+
+
+/*De vierde scène*/
+
+#smallAquarium {
+    position: absolute;
+    background-image: url(../img/fish_tank.png);
+    width: 835px;
+    height: 782px;
+    top: 80px;
+    left: 217px;
+    transform: scale(0.6);
+}
+
+#sand {
+    position: absolute;
+    background-image: url(../img/nisip1.jpeg);
+    width: 561px;
+    height: 226px;
+    top: 250px;
+    left: 0px;
+    animation: moveInSmallAquarium1 5s linear forwards;
+    transform: scale(0.6) rotate(2deg);
+}
+
+@keyframes moveInSmallAquarium1 {
+    0% {
+        top: 250px;
+        left: -20px;
+    }
+
+    30% {
+        top: 0px;
+        left: 50px;
+    }
+
+    65% {
+        top: 0px;
+        left: 350px;
+    }
+
+    100% {
+        top: 547px;
+        left: 350px;
+    }
+}
+
+#plant2 {
+    position: absolute;
+    background-image: url(../img/plant1.jpeg);
+    width: 250px;
+    height: 322px;
+    top: 180px;
+    left: 950px;
+    animation: moveInSmallAquarium 4s linear forwards 4s;
+}
+
+@keyframes moveInSmallAquarium {
+    0% {
+        top: 180px;
+        left: 950px;
+    }
+
+    50% {
+        top: -350px;
+        left: 460px;
+    }
+
+    100% {
+        top: 350px;
+        left: 460px;
+    }
+}
+
+#bettaVis2 {
+    position: fixed;
+    width: 806px;
+    height: 651px;
+    top: 130px;
+    left: 290px;
+    transform: scale(0.3);
+    transition: ease-in-out 1s;
+}
+
+#bettaVis2:hover {
+    transition: ease-in-out 1s;
+    transform: translateX(150px);
+}
+
+.babble1 {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    border-radius: 23px;
+    background-image: url(../img/bubble.png);
+    background-size: contain;
+    opacity: .4
+}
+
+.babbleOne1 {
+    animation: babbleanimation1 4s ease-in-out forwards infinite;
+}
+
+.babbleTwo1 {
+    animation: babbleanimation1 2s ease-in-out forwards infinite;
+}
+
+@keyframes babbleanimation1 {
+    from {
+        width: 0;
+        height: 0;
+        transform: translateY(0);
+    }
+
+    to {
+        width: 10px;
+        height: 10px;
+        transform: translateY(-150px);
+    }
+}
+
+#hiddenButton2{
+    top: 350px;
+    left: 1050px;
+}
+
+#blauwVis {
+    width: 806px;
+    top: 300px;
+    left: 1000px;
+    position: absolute;
+    animation: blauwVisBeweg 4s linear forwards 7s;
+}
+@keyframes blauwVisBeweg {
+    0% {
+        top: 300px;
+        left: 1000px;
+    }
+
+    25% {
+        top: 50px;
+        left: 830px;
+    }
+
+    50% {
+        top: 30px;
+        left: 520px;
+    }
+
+    100% {
+        top: 345px;
+        left: 640px;
+    }
+}
+
+#bettaSplenders{
+    transform: scale(0.2);
+    position: absolute;
+}
+
+
+/* De vijfde scène */
+
+#backgroundImage2 {
+    background-image: url(../img/big-ghid-de-amenajare-al-unui-acvariu-1576068910.jpeg);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: top;
+}
+
+#bettaSplenders1 {
+    transform: scale(0.2);
+    position: absolute;
+}
+
+#bettaSplenders2 {
+    transform: scale(0.2);
+    position: absolute;
+}
+
+#redFish1 {
+    width: 810px;
+    top: 50%;
+    right: 85%;
+    position: absolute;
+    animation: firstFish 4s linear forwards;
+    transform: scaleX(-1);
+}
+
+@keyframes firstFish {
+    0% {
+        top: 50%;
+        right: 85%;  
+    }
+
+    33% {
+        top: 10%;
+        right: 85%;
+    }
+
+    66% {
+        top: 10%;
+        right: 55%;
+    }
+
+    100% {
+        top: 51%;
+        right: 55%;
+    }
+}
+
+#blueFish {
+    width: 806px;
+    top: 50%;
+    left: 82%;
+    position: absolute;
+    animation: secondFish 4s linear forwards 2s;
+}
+
+@keyframes secondFish {
+    0% {
+        top: 50%;
+        left: 82%;
+    }
+
+    25% {
+        top: 10%;
+        left: 80%;
+    }
+
+    50% {
+        top: 10%;
+        left: 60%;
+    }
+
+    100% {
+        top: 50%;
+        left: 50%;
+    }
+}
+
+#stopSign {
+    background-image: url(../img/stop.png);
+    width: 624px;
+    height: 624px;
+    transform: scale(0.6);
+    top: -255px;
+    left: -42%;
+    position: absolute;
+    animation: stop ease-in 2s forwards 6s;
+    opacity: 0;
+}
+
+@keyframes stop {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h3 {
+   color: black;
+    font-size: 34px;
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+    animation: textStop ease-in 2s forwards 6s;
+    opacity: 0;
+    font-family:'Big Caslon';
+    font-weight: bold;
+}
+
+@keyframes textStop {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#toTheSixthScene {
+    top: 600px;
+    left: 80px;
+}
+
+
+/* De zesde scène*/
+
+#femaleBettaBox {
+    width: 470px;
+    height: 323px;
+    top: 50%;
+    left: 10%;
+    animation: female 4s linear forwards;
+    position: absolute;
+}
+
+#femaleBetta {
+    position: absolute;
+    transform: scale(0.3);
+}
+
+@keyframes female {
+    0% {
+        top: 50%;
+        left: 2%;
+    }
+
+    25% {
+        top: 0%;
+        left: 2%;
+    }
+
+    50% {
+        top: 0%;
+        left: 32%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 53%;
+        left: 32%;
+        transform: rotate(15deg);
+    }
+}
+
+#topFinFemale {
+    background-image: url(../img/topfinfemale.jpeg);
+    background-size: contain;
+    width: 470px;
+    height: 323px;
+    top: 122px;
+    left: 60px;
+    animation: topwing 3.5s linear forwards infinite;
+    transform-origin: bottom left;
+}
+
+@keyframes topwing {
+    0% {
+        transform: skewY(0);
+    }
+
+    50% {
+        transform: skewY(6deg);
+    }
+
+    100% {
+        transform: skewY(0);
+    }
+}
+
+#tailFemale {
+    background-image: url(../img/tailfemale.jpeg);
+    width: 470px;
+    height: 323px;
+    top: 158px;
+    left: 9px;
+    animation: swinging 2.5s linear forwards infinite;
+    transform-origin: left center;
+}
+
+@keyframes swinging {
+    0% {
+        transform: skewY(0deg);
+    }
+
+    25% {
+        transform: skewY(-3deg);
+    }
+
+    50% {
+        transform: skewY(0deg);
+    }
+
+    75% {
+        transform: skewY(3deg);
+    }
+
+    100% {
+        transform: skewY(0deg);
+    }
+}
+
+#bottomFinFemale {
+    background-image: url(../img/bottomFinFemale.jpeg);
+    width: 470px;
+    height: 323px;
+    top: 133px;
+    left: 12px;
+    animation: swingingWing 3.5s linear forwards infinite;
+    transform-origin: top center;
+}
+
+@keyframes swingingWing {
+    0% {
+        transform: skew(0deg);
+    }
+
+    50% {
+        transform: skew(6deg);
+    }
+
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+#bodyVisFemale {
+    background-image: url(../img/bodyFemale.jpeg);
+    background-size: contain;
+    top: 150px;
+    left: 10px;
+    width: 470px;
+    height: 323px;
+    animation: zwemmen 3.5s linear forwards infinite;
+    transform-origin: 20px center;
+}
+
+@keyframes zwemmen {
+    0% {
+        transform: skewY(0deg);
+    }
+
+    50% {
+        transform: skewY(1deg);
+        transform-origin: 100px;
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: skewY(0deg);
+    }
+}
+
+#hart {
+    width: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    animation: loading 1.5s infinite 6s;
+    transform-origin: 30px;
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    opacity: 0;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    13% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    26% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    39% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    87% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+.ronde {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+#cerc1 {
+    margin-left: 10px;
+    margin-right: -10px;
+}
+
+#romb {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    transform: rotate(45deg);
+    margin-left: 20px;
+    margin-top: -20px;
+}
+
+#end{
+    top: 35%;
+}
+
+
+/* De zevende scène*/
+
+a{
+    display: block;
+}
+
+#endScene{
+    position: fixed;
+    width: 500px;
+    height: 300px;
+}
+
+#endScene h1{
+    left: 390px;
+    top: 280px;
+}
+
+#button2 {
+    background-image: linear-gradient(to left, violet, indigo, blue);
+    color: white;
+    position: absolute;
+    width: 90px;
+    height: 36px;
+    left: 590px;
+    top: 480px;
+    font-weight: bold;
+    font-size: 19px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Eindopdracht</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="bettaVis">
+            <div class="babblesAn">
+                <div class="babbleOne babble"></div>
+                <div class="babbleTwo babble"></div>
+            </div>
+            <div id="fish">
+                <div id="topFin1" class="fish"></div>
+                <div id="tail1" class="fish"></div>
+                <div id="bottomFin1" class="fish"></div>
+                <div id="bodyVis1" class="fish"></div>
+            </div>
+        </div>
+
+        <div id="rodeBettaVis">
+            <div class="babblesAn">
+                <div class="babbleOne babble"></div>
+                <div class="babbleTwo babble"></div>
+            </div>
+            <div id="redFish">
+                <div id="topFin2" class="fish"></div>
+                <div id="tail2" class="fish"></div>
+                <div id="bottomFin2" class="fish"></div>
+                <div id="bodyVis2" class="fish"></div>
+            </div>
+        </div>
+
+        <h1>Wat moet je weten <br> over <br> BETTA SPLENDENS?
+            <br>
+            <br>
+            <input type="button" id="button1" onclick="firstButton()" value="Click me">
+        </h1>
+
+    </div>
+</body>
+
+<script>
+    let container = document.getElementById("container");
+    function firstButton() {
+        container.innerHTML = "<div id=backgroundImage1><p>De Betta is een kleine vis die oorspronkelijk uit Zuidoost-Azië komt. Deze vis is ook wel bekend onder de namen Betta Splendens, Siamese kempvis, Japanse vechtvis of Chinese vechtvis.<br><span>Vang de vis!</span></p><div id=bettaVis1><div class=babblesAn><div class=babbleOne babble></div><div class=babbleTwo babble></div></div><div id=visInNatuurlijkeHabitat><div id=topFin1 class=fish></div><div id=tail1 class=fish></div><div id=bottomFin1 class=fish></div><div id=bodyVis1 class=fish onmouseover=secondButton()></div></div></div>";
+    }
+
+    function secondButton() {
+        container.innerHTML = "<div id=aquarium1></div><div id=aquarium2></div><div id=aquarium3></div><input type=button class=naarDeVolgendeScène onclick=thirdButton() value=Next><div id=heater></div><div id=plant></div><div id=plant1></div><div id=filtru><div id=center class=filter></div><div id=left class=filter></div><div id=right class=filter></div></div><div id=termometer></div><div id=oxigen></div><div id=aquarium4></div><h2 class=textH2>De Betta kan in een groot aquarium leven...</h2><input type=button class=naarDeVolgendeScène id=skipButton onclick=thirdButton() value=Skip>";
+    }
+
+    function thirdButton() {
+        container.innerHTML = "<div id=vierdeScene><input type=button id=hiddenButton2 class=naarDeVolgendeScène onclick=fourthButton() value=Next><div id=sand></div><div id=plant2></div><div id=blauwVis><div id=bettaSplenders><div id=topFin1 class=fish></div><div id=tail1 class=fish></div><div id=bottomFin1 class=fish></div><div id=bodyVis1 class=fish></div></div></div><div id=smallAquarium></div><h2 class=textH2>Of hij kan in een klein aquarium leven.</h2><input type=button class=naarDeVolgendeScène id=skipButton onclick=fourthButton() value=Skip></div>"
+    }
+
+    function fourthButton() {
+        container.innerHTML = "<div id=backgroundImage2><div id=redFish1><div id=bettaSplenders2><div id=topFin2 class=fish></div><div id=tail2 class=fish></div><div id=bottomFin2 class=fish></div><div id=bodyVis2 class=fish></div></div></div><div id=blueFish><div id=bettaSplenders1><div id=topFin1 class=fish></div><div id=tail1 class=fish></div><div id=bottomFin1 class=fish></div><div id=bodyVis1 class=fish></div></div><div id=stopSign></div></div><h3><span>Vanwege hun agressieve karakter kunnen twee Kempvis mannetjes niet samen in een aquarium.</span></h3><input type=button class=naarDeVolgendeScène id=toTheSixthScene onclick=fifthButton() value=Next></div>"
+    }
+
+    function fifthButton() {
+        container.innerHTML = "<div id=backgroundImage2><div id=femaleBettaBox><div id=femaleBetta><div id=topFinFemale class=fish></div><div id=tailFemale class=fish></div><div id=bottomFinFemale class=fish></div><div id=bodyVisFemale class=fish></div></div></div><div id=blueFish><div id=bettaSplenders1><div id=topFin1 class=fish></div><div id=tail1 class=fish></div><div id=bottomFin1 class=fish></div><div id=bodyVis1 class=fish></div></div></div><div id=hart><div id=cerc1 class=ronde></div><div id=cerc2 class=ronde></div><div id=romb></div></div><h3><span>Het mannetje kan vergezeld zijn van een of meer vrouwtjes.</span></h3><input type=button class=naarDeVolgendeScène id=toTheSixthScene onclick=sixthButton() value=Next></div>"
+    }
+
+    function sixthButton() {
+        container.innerHTML = "<div id=endScene><h1 id=end>Het einde.<br>Bedankt voor het kijken.</h1><a href=index.html><input type=button id=button2 value=Restart></a></div>"
+    }
+
+</script>
+
+</html>
